@@ -338,6 +338,19 @@ The project is set up to build a high-quality frontend website strictly adhering
 
 ---
 
+### [GitHub Repository & Static Pages Deployment]
+- **Date / Timestamp**: 2026-09-03
+- **Action Category**: Deployment
+- **What We Created**: `.github/workflows/deploy.yml` GitHub Pages deployment action.
+- **What We Changed**:
+  - `next.config.mjs`: Configured static export (`output: "export"`, `images: { unoptimized: true }`).
+  - Initialized Git repository, committed codebase, and pushed to `https://github.com/rd-aswin/znscarpets`.
+  - Configured GitHub Pages workflow deployment at `https://rd-aswin.github.io/znscarpets/`.
+- **What We Fixed & How**: N/A.
+- **Current State**: Project live and deployed on GitHub Pages with automated CI/CD static builds.
+
+---
+
 ## 4. Master Change Register
 
 | Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
@@ -373,6 +386,7 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
 | `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
 | `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
 
 ---
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logo from "../../public/logo.svg";
 import NavLink from "./NavLink";
 import Menu from "./Menu";
 import DropdownMenu from "./DropdownMenu";
@@ -24,7 +25,7 @@ export default function Header() {
               {/* Logo positioned 60px to the left of Expert Insights */}
               <Link href="/" className="flex items-center justify-center">
                 <Image
-                  src="/logo.svg"
+                  src={logo}
                   alt="Z&S Carpets"
                   width={187}
                   height={80}
