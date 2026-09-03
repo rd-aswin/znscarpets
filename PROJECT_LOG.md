@@ -593,6 +593,18 @@ The project is set up to build a high-quality frontend website strictly adhering
 
 ---
 
+### [GitHub Actions Workflow & next.config.mjs Fix]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: CI/CD & Deployment Fix
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `.github/workflows/deploy.yml`: Removed `static_site_generator: next` parameter from `actions/configure-pages@v5` step.
+  - `next.config.mjs`: Explicitly defined `basePath: basePath || undefined` to ensure robust Next.js static export compilation across all environments.
+- **What We Fixed & How**: Fixed GitHub Actions build failure where `configure-pages` attempted to auto-inject `basePath` via string regex into `next.config.mjs`, causing a `SyntaxError: Unexpected string` during `npx next build`.
+- **Current State**: GitHub Pages automated build and deploy pipeline verified with 100% clean production export.
+
+---
+
 ## 4. Master Change Register
 
 | Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
@@ -646,6 +658,7 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
 | `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
 | `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
 
 ---
 
