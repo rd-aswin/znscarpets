@@ -363,6 +363,224 @@ The project is set up to build a high-quality frontend website strictly adhering
 
 ---
 
+### [Responsive Header Architecture Transformation]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Responsive Refactoring
+- **What We Created**: `.no-scrollbar` utility in `src/app/globals.css`.
+- **What We Changed**:
+  - `src/components/Header.jsx`: Replaced fixed pixel containers with fluid breakpoint logic (`2xl:` for Full HD 1920px, `xl:`, `lg:`, `md:`, `sm:`, and mobile).
+  - Configured adaptive padding (`px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-[80px]`), dynamic logo height (`h-[44px]` up to `h-[80px]`), and responsive gaps.
+  - Lower Header now offers horizontal touch/momentum scrolling on smaller devices (`overflow-x-auto no-scrollbar`) while maintaining full `justify-between` distribution on 2xl Full HD monitors.
+  - `src/components/Menu.jsx` and `src/components/DropdownMenu.jsx`: Scaled for mobile and tablet touch targets.
+- **What We Fixed & How**: Eliminates rigid layout overflow and makes the header fully responsive across all device viewports.
+- **Current State**: Header works seamlessly from small mobile screens (320px) up to 4K / Full HD monitors (1920px).
+
+---
+
+### [Hero Video Component & Landing Page Integration]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Creation & Assembly
+- **What We Created**: `src/components/HeroVideo.jsx`.
+- **What We Changed**:
+  - `src/app/page.js`: Mounted `<HeroVideo />` directly below `<Header />`.
+  - `next.config.mjs`: Added `NEXT_PUBLIC_BASE_PATH` environment exposure for subpath video resolution.
+  - Video configured with continuous looping (`autoPlay`, `loop`, `muted`, `playsInline`, `preload="auto"`), responsive maximum width (`w-full`), and proportional auto height (`h-auto block object-cover`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Hero video plays continuously in a loop beneath the header with full-width responsive scaling.
+
+---
+
+## 4. Master Change Register
+
+### [Hero Video Viewport Bottom Alignment & Object Cropping]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Styling & Layout Adjustment
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Set container height to dynamic remaining viewport height (`h-[calc(100dvh-106px)]` up to `2xl:h-[calc(100dvh-163px)]`) so the video reaches the bottom edge of the screen without any vertical scrolling required.
+  - Applied `object-cover object-bottom` to pin the video's bottom to the viewport floor while any top overflow crops smoothly.
+- **What We Fixed & How**: Eliminates vertical scrolling to view the bottom of the video on initial page load.
+- **Current State**: Video fills the exact viewport below the header and anchors to the bottom edge.
+
+---
+
+### [Hero Video Gradient Overlay]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Styling & Visual Effect
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Added an absolute overlay layer with `bg-gradient-to-r from-black from-[15%] to-transparent opacity-80 pointer-events-none`.
+- **What We Fixed & How**: N/A.
+- **Current State**: 80% opacity black-to-transparent gradient active across the video starting from 15% distance from the left edge.
+
+---
+
+### [Hero Video Vertical Category Labels]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Styling & Feature Addition
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Added vertical labels ("Residential | Commercial | Hospitality | Outdoor") reading from bottom to top on the left side of the hero video.
+  - Highlighted "Commercial" in `#0066B3` blue.
+  - Applied underlines (`underline underline-offset-4`) to all four category words with pipe `|` separators in Inter font.
+- **What We Fixed & How**: N/A.
+- **Current State**: Vertical bottom-to-top category indicator rendered on top of the hero video.
+
+---
+
+## 4. Master Change Register
+
+### [Hero Video Vertical Labels Left Spacing Adjustment]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Styling Adjustment
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Cut the left spacing in half from `2xl:left-[80px]` (`left-4` up to `left-12`) down to `2xl:left-[40px]` (`left-2` up to `left-6`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Vertical category labels positioned 40px from the left edge on 2xl Full HD screens (and scaled down on smaller viewports).
+
+---
+
+## 4. Master Change Register
+
+### [Hero Video Vertical Category Length Distribution & Light Dividers]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Layout & Visual Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Configured dynamic length (`w-[calc(100dvh-160px)]` up to `2xl:w-[calc(100dvh-220px)]`) with `justify-between` so the vertical labels stretch and align across the entire remaining video height.
+  - Replaced thick font pipes with subtle 1px light dividers (`h-3.5 w-[1px] bg-white/35`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Vertical categories are evenly distributed along the full height of the hero video with light separators.
+
+---
+
+## 4. Master Change Register
+
+### [Hero Video Viewport Bottom to Header Label Alignment]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Alignment & Dimension Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Set the vertical label container length to exact remaining viewport height from bottom (`bottom-0` with `w-[calc(100dvh-headerHeight)]` and `px-6` to `2xl:px-10`), spreading the words smoothly between the bottom of the viewport ("Residential") and just below the header ("Outdoor").
+- **What We Fixed & How**: N/A.
+- **Current State**: Labels span and align directly from the bottom edge of the viewport up to just below the header.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+### [Hero Video Nobile Headline Addition]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Typography & Content Addition
+- **What We Created**: Added Google Font `Nobile` in `src/app/layout.js`.
+- **What We Changed**:
+  - `src/app/layout.js`: Imported and exposed `--font-nobile` CSS variable.
+  - `src/components/HeroVideo.jsx`: Added two-line headline ("Trusted Flooring Specialists <br /> in UAE & GCC") rendered in Nobile font, medium weight, 56px font size (on 2xl), positioned with double the left padding distance (80px gap from the vertical labels).
+- **What We Fixed & How**: N/A.
+- **Current State**: 56px Nobile headline rendered horizontally to the right of the vertical category strip.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+### [Hero Video Headline & Subtitle Typography Update]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Typography & Content Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Reduced headline font size to 50px (Nobile medium).
+  - Adjusted line breaks to:
+    - Line 1: `Trusted Flooring`
+    - Line 2: `Specialists in UAE & GCC`
+  - Added subtitle `"For Homes, Offices & Commercial Spaces"` below the headline in Google Font **Inter**, medium weight (500), 22px font size.
+- **What We Fixed & How**: N/A.
+- **Current State**: 50px Nobile headline + 22px Inter subtitle rendered cleanly over the hero video.
+
+---
+
+### [Request Quote Button Component]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Creation & Assembly
+- **What We Created**: `src/components/RequestQuoteButton.jsx`.
+- **What We Changed**:
+  - `src/components/RequestQuoteButton.jsx`: Created transparent button component with 1px white border (`border border-white`), white text (`text-white`), and subtle hover effect (`hover:bg-white/10`).
+  - `src/components/HeroVideo.jsx`: Mounted `<RequestQuoteButton />` below the subtitle with twice the distance (`mt-6 sm:mt-8 2xl:mt-[36px]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Transparent Request Quote button active below hero subtitle.
+
+---
+
+## 4. Master Change Register
+
+### [Hero Text Block Bottom Baseline Alignment]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Layout & Alignment Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Positioned the headline, subtitle, and Request Quote button container anchored at `bottom-6 sm:bottom-8 2xl:bottom-10`, so the button bottom edge aligns with the bottom baseline level where the vertical text begins.
+- **What We Fixed & How**: N/A.
+- **Current State**: Request Quote button rests on the exact same bottom level as the vertical category label origin.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+### [Floating Actions Contact Icons Component]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Creation & Floating Layout
+- **What We Created**: `src/components/FloatingActions.jsx`.
+- **What We Changed**:
+  - `src/components/FloatingActions.jsx`: Created fixed vertical stack containing the 3 provided SVG contact icons in order:
+    1. Phone Call (`#0066B3` blue)
+    2. WhatsApp (`#72BF44` green)
+    3. Mail / Email (`#812990` purple)
+  - Placed fixed to the screen (`fixed z-50`) on the right (`right-3 sm:right-5 2xl:right-[40px]`), aligned at the exact same bottom level (`bottom-6 sm:bottom-8 2xl:bottom-10`), sticking to viewport persistently across scrolling.
+  - `src/app/layout.js`: Mounted `<FloatingActions />` in `RootLayout`.
+- **What We Fixed & How**: N/A.
+- **Current State**: 3 stacked contact SVGs fixed on the bottom-right of the screen across all pages.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+### [Hero Card Box Component]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Creation & Assembly
+- **What We Created**: `src/components/HeroCard.jsx`.
+- **What We Changed**:
+  - `src/components/HeroCard.jsx`: Created 380×160px white card component (`rounded-[6px]`, `bg-white`, `p-3`) with left-aligned square image (`public/hero_card.jpg`) having 6px border radius.
+  - `src/components/HeroVideo.jsx`: Mounted `<HeroCard />` positioned 30px to the left of the floating contact icons (`2xl:right-[118px]`) and aligned with the bottom baseline level (`bottom-6 sm:bottom-8 2xl:bottom-10`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Hero card box rendered with square image on the bottom-right of the hero section.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+### [Floating Icons Scale Down & Hero Card 8px Radius Refinement]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Visual & Dimension Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/FloatingActions.jsx`: Scaled down contact SVG icon sizes to 40×38px on 2xl (and down to 34×33px on mobile) for a more compact, refined look.
+  - `src/components/HeroCard.jsx`: Increased border radius to 8px (`rounded-[8px]`) for both the outer white rectangle and the image; adjusted image container to display rectangular format (`w-[165px] h-full object-cover`).
+  - `src/components/HeroVideo.jsx`: Adjusted right position of `<HeroCard />` (`2xl:right-[110px]`) preserving the exact 30px gap to the left of the floating icons.
+- **What We Fixed & How**: N/A.
+- **Current State**: Compact floating icons and 8px-radius rectangular HeroCard active.
+
+---
+
 ## 4. Master Change Register
 
 | Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
@@ -400,6 +618,21 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
 | `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
 | `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
 
 ---
 

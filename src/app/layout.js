@@ -1,5 +1,6 @@
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Nobile } from "next/font/google";
 import "./globals.css";
+import FloatingActions from "@/components/FloatingActions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +13,12 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
+const nobile = Nobile({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-nobile",
+});
+
 export const metadata = {
   title: "Top Flooring Company in Dubai | Flooring Suppliers in Dubai",
   description: "Z&S Carpets",
@@ -22,9 +29,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.className} ${manrope.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.className} ${manrope.variable} ${nobile.variable}`}>
+      <body>
+        {children}
+        <FloatingActions />
+      </body>
     </html>
   );
 }
-

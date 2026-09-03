@@ -1,7 +1,12 @@
+const basePath = process.env.GITHUB_ACTIONS ? "/znscarpets" : "";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: process.env.GITHUB_ACTIONS ? "/znscarpets" : "",
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },
