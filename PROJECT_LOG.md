@@ -583,6 +583,18 @@ The project is set up to build a high-quality frontend website strictly adhering
 
 ## 4. Master Change Register
 
+### [GitHub Repository Sync & Live Deployment]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Version Control & Deployment
+- **What We Created**: N/A.
+- **What We Changed**: Committed all hero video, typography, contact action buttons, and hero card box component changes to `main` branch and pushed upstream to `https://github.com/rd-aswin/znscarpets.git`.
+- **What We Fixed & How**: N/A.
+- **Current State**: GitHub repository synced with latest commit; GitHub Pages deployment workflow triggered.
+
+---
+
+## 4. Master Change Register
+
 | Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
@@ -633,6 +645,7 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
 | `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
 | `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
 
 ---
 
