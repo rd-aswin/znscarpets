@@ -351,6 +351,18 @@ The project is set up to build a high-quality frontend website strictly adhering
 
 ---
 
+### [Logo 404 Path Resolution for GitHub Pages]
+- **Date / Timestamp**: 2026-09-03
+- **Action Category**: Bug Fix / Configuration
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `next.config.mjs`: Added dynamic `basePath` resolution for GitHub Pages repository root (`/znscarpets`).
+  - `src/components/Header.jsx`: Changed logo reference to static import (`import logo from "../../public/logo.svg"`), ensuring proper subpath resolution across all environments.
+- **What We Fixed & How**: Resolved `logo.svg 404` error on GitHub Pages. Build and live deployment verified successful.
+- **Current State**: Logo asset loads correctly on both local development and GitHub Pages static hosting.
+
+---
+
 ## 4. Master Change Register
 
 | Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
@@ -387,6 +399,7 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
 | `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
 | `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
 
 ---
 

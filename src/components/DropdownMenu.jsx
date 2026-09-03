@@ -2,7 +2,7 @@ export default function DropdownMenu({ label = "Dropdown", children }) {
   return (
     <button
       type="button"
-      className="flex items-center gap-[6px] text-[14px] font-medium text-white cursor-pointer transition-opacity hover:opacity-90"
+      className="flex items-center gap-[6px] text-[13px] sm:text-[14px] font-medium text-white cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
     >
       <span>{children || label}</span>
       <svg
