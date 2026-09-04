@@ -655,12 +655,582 @@ The project is set up to build a high-quality frontend website strictly adhering
 | `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
 | `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
 | `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+### [Header Reversion to 18px Typography & Original Spacing]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Styling & Layout Reversion
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/NavLink.jsx`: Restored navbar link typography to 18px medium font (`text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium`).
+  - `src/components/Header.jsx`: Restored container horizontal padding to 102px (`2xl:px-[102px]`), navigation gaps to 86px (`2xl:gap-[86px]`), right group gap to 86px, action button SVG to 46×46px (`2xl:h-[46px] 2xl:w-[46px]`), and gap between action button and Menu to 16px (`2xl:gap-[16px]`).
+  - `src/components/Menu.jsx`: Restored Menu button dimensions to 128×45px (`2xl:w-[128px] 2xl:h-[45px]`), 18px horizontal padding (`2xl:px-[18px]`), 18px Manrope text (`2xl:text-[18px]`), and 6px border radius (`rounded-[6px]`).
+- **What We Fixed & How**: Reverted all header font sizes, container paddings, element gaps, and button dimensions back to the original 18px specification state.
+- **Current State**: Header rendered with 18px typography, 86px gaps, 102px container padding, 46px action button, and 128×45px Menu button.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
 | `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
 | `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
 | `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
 | `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+### [Logo Centering, 227×96.22px Logo Size & 128×45.63px Menu Button]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Layout & Sizing Update
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/Header.jsx`: Positioned the brand logo in the direct horizontal center between the Left Navigation group (`About Us`, `Services`, `Our Work`, `Resources`) and the Right Navigation group (`Expert Insights`, `Contact us`, `Get a sample`, Action Buttons).
+  - Updated logo dimensions to **227px width × 96.22px height** (`2xl:w-[227px] 2xl:h-[96.22px]`).
+  - `src/components/Menu.jsx`: Updated Menu button dimensions to exact **128px width × 45.63px height** (`2xl:w-[128px] 2xl:h-[45.63px]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Centered 227×96.22px brand logo and 128×45.63px Menu button active in the Header.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+### [Lower Header 48px Height, 21×20.83px Search Icon & 50px Right Nav Links Gap]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Layout & Sizing Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/Header.jsx`: Set Lower Header height to **48px** (`2xl:h-[48px]`).
+  - Updated Search icon dimensions to **21px width × 20.83px height** (`w-[21px] h-[20.83px]`, `width="21" height="20.83"`).
+  - Maintained left-side nav links gap at **86px** (`2xl:gap-[86px]`).
+  - Set spacing between right-side nav links (`Expert Insights`, `Contact us`, `Get a sample`) and action buttons to **50px** (`2xl:gap-[50px]`).
+  - `src/components/HeroVideo.jsx`: Adjusted remaining viewport height and vertical category label container length calculation to account for the 48px lower header height (`2xl:h-[calc(100dvh-171px)]` and `2xl:w-[calc(100dvh-171px)]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Lower header active with 48px height, 21×20.83px search icon, 86px left nav gap, and 50px right nav gap.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+### [Lower Header 18px Typography & Proportional Chevron Icon]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Styling & Typography Scaling
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/DropdownMenu.jsx`: Scaled typography to **18px Inter Medium** (`2xl:text-[18px] font-medium text-white`).
+  - Scaled chevron dropdown SVG icon to **15px width × 9px height** (`2xl:w-[15px] 2xl:h-[9px]`, `width="15" height="9"`).
+  - Adjusted spacing between label text and chevron icon to **8px** (`2xl:gap-[8px]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Lower header category links rendered in 18px Inter Medium with scaled 15×9px chevron icons and 8px gap.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+| `053` | 2026-09-04 | Lower Header Height & Right Nav Gap | Set lower header height to 48px, search icon to 21×20.83px, and right nav gap to 50px | Header spacing & sizing refined | Completed |
+### [Lower Header 'En' Language Dropdown Addition]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Navigation Addition
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/Header.jsx`: Added `<DropdownMenu label="En" />` to the Lower Header category navigation before the search icon.
+- **What We Fixed & How**: N/A.
+- **Current State**: Lower header renders 9 dropdown categories ("Artificial Grass", "Vinyl Flooring", "Deck Flooring", "Spc Flooring", "Laminate Flooring", "Carpet Flooring", "Lvt Flooring", "More", "En") and search icon evenly spaced.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+| `053` | 2026-09-04 | Lower Header Height & Right Nav Gap | Set lower header height to 48px, search icon to 21×20.83px, and right nav gap to 50px | Header spacing & sizing refined | Completed |
+| `054` | 2026-09-04 | Lower Header 18px Typography | Scaled lower header font to 18px, chevron icon to 15×9px, and gap to 8px | Dropdown typography and icon scaled | Completed |
+### [Hero Video 20px Bottom Clearance & 100px Vertical Text Spacing Gaps]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Component Layout & Spacing Calibration
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Configured the video section height to end **20px above the viewport bottom** (`2xl:h-[calc(100dvh-191px)]`).
+  - Configured vertical category text to start **100px below the lower header** and **100px above the bottom end of the video** (`2xl:w-[calc(100dvh-391px)]`, `2xl:bottom-[100px]`).
+  - Aligned the headline, subtitle, Request Quote button, and HeroCard baseline to start at **100px from the bottom of the video** (`2xl:bottom-[100px]`).
+  - `src/components/FloatingActions.jsx`: Aligned fixed contact actions to match the 120px screen bottom baseline (`2xl:bottom-[120px]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Hero video ends 20px above viewport bottom with symmetrical 100px gaps at top and bottom of vertical category labels.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+| `053` | 2026-09-04 | Lower Header Height & Right Nav Gap | Set lower header height to 48px, search icon to 21×20.83px, and right nav gap to 50px | Header spacing & sizing refined | Completed |
+| `054` | 2026-09-04 | Lower Header 18px Typography | Scaled lower header font to 18px, chevron icon to 15×9px, and gap to 8px | Dropdown typography and icon scaled | Completed |
+| `055` | 2026-09-04 | Lower Header 'En' Dropdown Addition | Added 'En' dropdown menu item to Lower Header category navigation list | Lower Header navigation expanded | Completed |
+### [Hero Video Vertical Text Inter-Regular 20px Typography]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Typography Refinement
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Updated the vertical category labels typography to **Inter Regular (400) at 20px font size** (`2xl:text-[20px] font-normal`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Vertical category text rendered in 20px Inter Regular (`font-normal`).
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+| `053` | 2026-09-04 | Lower Header Height & Right Nav Gap | Set lower header height to 48px, search icon to 21×20.83px, and right nav gap to 50px | Header spacing & sizing refined | Completed |
+| `054` | 2026-09-04 | Lower Header 18px Typography | Scaled lower header font to 18px, chevron icon to 15×9px, and gap to 8px | Dropdown typography and icon scaled | Completed |
+| `055` | 2026-09-04 | Lower Header 'En' Dropdown Addition | Added 'En' dropdown menu item to Lower Header category navigation list | Lower Header navigation expanded | Completed |
+| `056` | 2026-09-04 | Hero Video 20px Clearance & 100px Vertical Gaps | Video ends 20px above viewport bottom; vertical text spans with 100px top & bottom gaps | Video & vertical spacing calibrated | Completed |
+### [Hero Video Vertical Text 32px Left Inset Calibration]
+- **Date / Timestamp**: 2026-09-04
+- **Action Category**: Spacing Adjustment
+- **What We Created**: N/A.
+- **What We Changed**:
+  - `src/components/HeroVideo.jsx`: Updated vertical category labels left inset to **32px** (`2xl:left-[32px]`) and positioned horizontal headline container at **124px** (`2xl:left-[124px]`).
+- **What We Fixed & How**: N/A.
+- **Current State**: Vertical category text positioned 32px from the left edge of the hero section.
+
+---
+
+## 4. Master Change Register
+
+| Entry # | Date | Action / Component | Details / What was Done | Changes / Fixes Applied | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `001` | 2026-09-03 | Project Rules & Log Setup | Created `INSTRUCTIONS.md` & `PROJECT_LOG.md` | Initialized documentation structure | Completed |
+| `002` | 2026-09-03 | Project Initialization | Bootstrapped Next.js App Router with Tailwind CSS (JS/JSX, npm, src/ directory) | Generated initial Next.js + Tailwind project | Completed |
+| `003` | 2026-09-03 | Header Skeleton & Cleanup | Created `src/components/Header.jsx` and cleared default boilerplate from `src/app/page.js` | Bare `<Header />` mounted, zero styling/assumptions | Completed |
+| `004` | 2026-09-03 | Global CSS Reset | Cleaned `src/app/globals.css` to only `@import "tailwindcss";` | Removed all predefined colors, theme, and body styles | Completed |
+| `005` | 2026-09-03 | Font & Layout Reset | Cleaned `src/app/layout.js` | Removed Geist/Geist Mono fonts and template classes | Completed |
+| `006` | 2026-09-03 | Asset Cleanup & Favicon | Purged template SVGs from `public/` and default `favicon.ico`; configured `/logo.svg` as favicon in `layout.js` | `public/logo.svg` active as site icon | Completed |
+| `007` | 2026-09-03 | Metadata Title & Description | Updated `src/app/layout.js` title and description | Set title to "Top Flooring Company in Dubai \| Flooring Suppliers in Dubai" & description to "Z&S Carpets" | Completed |
+| `008` | 2026-09-03 | Header Dimensions & Spacing | Configured `Header.jsx` container | Set height to 123px, white background, and 102px horizontal padding | Completed |
+| `009` | 2026-09-03 | NavLink Component | Created `src/components/NavLink.jsx` and imported into `Header.jsx` | Minimal component wrapping Next.js `Link` | Completed |
+| `010` | 2026-09-03 | Inter Font & About Link | Configured `Inter` in `layout.js`, set `text-[18px] font-medium` on `NavLink`, added "About" link | "About" nav item active in Header | Completed |
+| `011` | 2026-09-03 | Nav Links Expansion | Updated Header to render "About Us", "Services", "Our Work", "Resources" horizontally | Horizontal navbar items configured | Completed |
+| `012` | 2026-09-03 | Nav Spacing Adjustment | Configured `gap-[86px]` between navbar items | Spacing updated to exact 86px | Completed |
+| `013` | 2026-09-03 | Menu Component | Created `src/components/Menu.jsx` and mounted into `Header.jsx` | Minimal component skeleton added | Completed |
+| `014` | 2026-09-03 | Menu Styling & Manrope Font | Configured Manrope font, 128x45px dimensions, 18px padding, left text & right hamburger | Styled Menu button | Completed |
+| `015` | 2026-09-03 | Menu Border & Radius | Added `border border-[#0066B3]` (1px) and `rounded-[6px]` (6px) | Border and corner radius applied | Completed |
+| `016` | 2026-09-03 | Action Button SVG | Added 46×46px SVG button 16px to the left of Menu in Header | Mounted with `gap-[16px]` to Menu | Completed |
+| `017` | 2026-09-03 | Additional Nav Links | Added "Expert Insights", "Contact us", and "Get a sample" to navigation | Complete navigation items rendered | Completed |
+| `018` | 2026-09-03 | Sizing & Spacing Scaled | Reduced nav font to 14px, header padding to 80px, and balanced nav gap to 48px | Header scaled to 14px / 80px padding | Completed |
+| `019` | 2026-09-03 | Nav Layout Split | Positioned "Expert Insights", "Contact us", and "Get a sample" on right side to the left of SVG | Layout split into left and right navigation | Completed |
+| `020` | 2026-09-03 | JSX Tag Fix | Fixed unclosed container `<div>` tag in `Header.jsx` | Clean syntax & build compilation verified | Completed |
+| `021` | 2026-09-03 | SVG & Menu Scale Down | Scaled SVG button to 36×36px and Menu button to 105×36px with 13px font | Proportional visual balance achieved | Completed |
+| `022` | 2026-09-03 | Centered Logo Placement | Added `logo.svg` in the middle of Header between left and right navigation groups | Centered logo brand link active | Completed |
+| `023` | 2026-09-03 | Logo 2x Scaling | Doubled logo display dimensions to 243.4px × 104px | 2x logo size rendered in Header | Completed |
+| `024` | 2026-09-03 | Logo Height Adjustment | Set logo height to 80px (`187.2px × 80px`) | Logo height adjusted to 80px | Completed |
+| `025` | 2026-09-03 | Logo Repositioning | Moved logo to 40px left of "Expert Insights" link (`gap-[40px]`) | Repositioned relative to right nav | Completed |
+| `026` | 2026-09-03 | Logo Spacing Adjustment | Updated gap between logo and "Expert Insights" to 60px (`gap-[60px]`) | Gap increased to 60px | Completed |
+| `027` | 2026-09-03 | Lower Header Addition | Added Lower Header (48px height, `#0066B3` background, `px-[80px]`) | Two-tier Header structure active | Completed |
+| `028` | 2026-09-03 | Lower Header Height Reduction | Reduced Lower Header height to 40px (`h-[40px]`) | Lower header scaled to 40px height | Completed |
+| `029` | 2026-09-03 | DropdownMenu Component | Created `DropdownMenu.jsx` with Inter 14px white text + SVG chevron and added to Lower Header | Dropdown component active | Completed |
+| `030` | 2026-09-03 | Lower Header Dropdown Items & Search | Populated Lower Header with 8 categories and search SVG icon | Category navigation with search active | Completed |
+| `031` | 2026-09-03 | Lower Header Equal Spacing | Distributed all 8 dropdowns and search icon evenly using `justify-between` | Equal horizontal spacing applied | Completed |
+| `032` | 2026-09-03 | GitHub Repo & Static Pages Deploy | Created GitHub repository and deployed to GitHub Pages via automated workflow | Live static site deployed | Completed |
+| `033` | 2026-09-03 | Logo 404 Resolution | Resolved subpath 404 on GitHub Pages by static logo import and dynamic basePath | Logo asset rendering verified | Completed |
+| `034` | 2026-09-04 | Responsive Header Refactoring | Transformed rigid pixel values into progressive Tailwind breakpoints | Multi-device responsive support active | Completed |
+| `035` | 2026-09-04 | Hero Video Integration | Created `HeroVideo.jsx` playing `hero.mp4` continuously in loop with full width and auto height | Landing page hero video active | Completed |
+| `036` | 2026-09-04 | Hero Video Bottom Alignment | Pinned video bottom to viewport bottom with `object-bottom` and exact `calc(100dvh - header)` height | Viewport bottom lock active | Completed |
+| `037` | 2026-09-04 | Hero Video Gradient Overlay | Added 80% opacity black-to-transparent gradient overlay starting at 15% distance from left edge | Visual gradient overlay active | Completed |
+| `038` | 2026-09-04 | Hero Video Vertical Categories | Added vertical bottom-to-top category labels on the left with Commercial in #0066B3 blue | Vertical labels active | Completed |
+| `039` | 2026-09-04 | Hero Video Vertical Left Spacing | Cut left spacing in half from 80px to 40px (2xl) and proportionally scaled | Spacing halved | Completed |
+| `040` | 2026-09-04 | Hero Video Vertical Height Spread | Distributed labels evenly across remaining video height with lightweight 1px dividers | Height spreading & light dividers active | Completed |
+| `041` | 2026-09-04 | Hero Video Viewport Span Alignment | Spanned labels directly between bottom of viewport and just below the header | Viewport-to-header span active | Completed |
+| `042` | 2026-09-04 | Hero Video Nobile Headline | Added two-line headline in Nobile 56px medium font to the right of vertical categories | Headline active | Completed |
+| `043` | 2026-09-04 | Hero Video Headline & Subtitle | Scaled headline to 50px (Nobile medium) and added subtitle in Inter 22px medium | Typography updated | Completed |
+| `044` | 2026-09-04 | Request Quote Button Component | Created `RequestQuoteButton.jsx` with 1px border and placed with 2x distance below subtitle | Button component active | Completed |
+| `045` | 2026-09-04 | Hero Content Bottom Baseline Alignment | Shifted headline, subtitle, and button down so button touches the bottom level of vertical text | Baseline alignment active | Completed |
+| `046` | 2026-09-04 | Floating Actions Contact Icons | Created `FloatingActions.jsx` with 3 stacked contact SVGs (Phone, WhatsApp, Mail) fixed to screen | Fixed contact stack active | Completed |
+| `047` | 2026-09-04 | Hero Card Component | Created `HeroCard.jsx` (380×160px, rounded 6px, white bg) with square `hero_card.jpg` image | Hero card active | Completed |
+| `048` | 2026-09-04 | Floating Icons & HeroCard Refinement | Scaled icons down to 40x38px; updated HeroCard to 8px radius with rectangular image formatting | Refinements active | Completed |
+| `049` | 2026-09-04 | GitHub Repository Sync | Pushed hero video, typography, quote button, floating actions, and card components | Live sync complete | Completed |
+| `050` | 2026-09-04 | CI/CD GitHub Actions Build Fix | Removed `static_site_generator` injection from deploy workflow and refined `next.config.mjs` basePath | GitHub Pages build syntax error resolved | Completed |
+| `051` | 2026-09-04 | Header Reversion to 18px Layout | Restored 18px text, 86px gaps, 102px padding, 46px SVG button, and 128×45px Menu | Header sizing restored to 18px era | Completed |
+| `052` | 2026-09-04 | Centered Logo & Sizing Update | Set logo size to 227×96.22px, centered in header, and Menu to 128×45.63px | Header layout & sizing updated | Completed |
+| `053` | 2026-09-04 | Lower Header Height & Right Nav Gap | Set lower header height to 48px, search icon to 21×20.83px, and right nav gap to 50px | Header spacing & sizing refined | Completed |
+| `054` | 2026-09-04 | Lower Header 18px Typography | Scaled lower header font to 18px, chevron icon to 15×9px, and gap to 8px | Dropdown typography and icon scaled | Completed |
+| `055` | 2026-09-04 | Lower Header 'En' Dropdown Addition | Added 'En' dropdown menu item to Lower Header category navigation list | Lower Header navigation expanded | Completed |
+| `056` | 2026-09-04 | Hero Video 20px Clearance & 100px Vertical Gaps | Video ends 20px above viewport bottom; vertical text spans with 100px top & bottom gaps | Video & vertical spacing calibrated | Completed |
+| `057` | 2026-09-04 | Vertical Text Inter Regular 20px | Updated vertical category labels to Inter Regular (400) at 20px font size | Vertical typography updated | Completed |
+| `058` | 2026-09-04 | Vertical Text 32px Left Inset | Updated vertical category labels left inset to 32px and headline container to 124px | Left spacing adjusted to 32px | Completed |
+| `059` | 2026-09-04 | Vertical Text 32px Left Alignment Transform Fix | Fixed CSS transform origin to `origin-top-left` with `top-[calc(100%-100px)]` so the 32px left gap is measured directly from the left edge of the vertical text rather than being offset by its height | 32px left gap calibrated | Completed |
+| `060` | 2026-09-04 | Hero Video 830px Height & Typography/Button Updates | Set hero section height to exact 830px from lower header bottom, headline to 56px, subtitle to 25px with 40px top gap, button top gap to 70px, button dimensions to 184×50px with 16px Manrope semibold font, and vertical text span to 630px | Hero section updated to exact 830px specifications | Completed |
+| `061` | 2026-09-04 | Vertical Text to Headline 100px Gap Calibration | Updated headline, subtitle, and quote button container left position to 160px (`2xl:left-[160px]`), providing exact 100px clearance from the right boundary of the 32px-inset vertical category column | 100px gap calibrated | Completed |
+| `062` | 2026-09-04 | Floating Actions 48×46px Size & 100px Bottom Level Alignment | Updated contact quick action SVG icon sizes to 48×46px each, aligned container bottom baseline to 100px (matching the card, button, and vertical text bottom level), and adjusted HeroCard right inset to 118px | 48×46px icons and 100px bottom alignment active | Completed |
+| `063` | 2026-09-04 | Hero Card 499×192px Sizing & 55px Gap Update | Updated HeroCard dimensions to 499×192px, image mask to 180×138px, left padding to 18px, and positioned card 55px to the left of the floating contact stack (`2xl:right-[143px]`) | HeroCard dimensions & 55px gap calibrated | Completed |
+| `064` | 2026-09-04 | Floating Actions Hero Section Bottom Baseline Lock | Mounted FloatingActions directly inside HeroVideo positioned at `2xl:bottom-[100px]`, locking its bottom edge to the exact same 100px baseline level as HeroCard, RequestQuoteButton, and vertical text origin | Shared 100px bottom baseline locked | Completed |
 
 ---
 
 ## 5. Upcoming Steps
 - Awaiting user instruction for next step.
+
+
+
+
+
+

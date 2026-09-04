@@ -10,52 +10,50 @@ export default function Header() {
     <header className="w-full">
       {/* Upper Header */}
       <div className="w-full bg-white border-b border-gray-100 lg:border-b-0">
-        <div className="mx-auto flex h-[70px] sm:h-[80px] md:h-[95px] lg:h-[110px] 2xl:h-[123px] max-w-[1920px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-[80px]">
+        <div className="mx-auto flex h-[70px] sm:h-[80px] md:h-[95px] lg:h-[110px] 2xl:h-[123px] max-w-[1920px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-[102px]">
           {/* Left Navigation (Visible on xl and 2xl desktop) */}
-          <nav className="hidden xl:flex items-center gap-6 2xl:gap-[48px]">
+          <nav className="hidden xl:flex items-center gap-6 2xl:gap-[86px]">
             <NavLink href="/about-us">About Us</NavLink>
             <NavLink href="/services">Services</NavLink>
             <NavLink href="/our-work">Our Work</NavLink>
             <NavLink href="/resources">Resources</NavLink>
           </nav>
 
-          {/* Right Group: Logo, Right Nav Links, Action Button, and Menu */}
-          <div className="flex items-center justify-between w-full xl:w-auto xl:justify-start gap-4 sm:gap-6 lg:gap-8 2xl:gap-[48px]">
-            <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 2xl:gap-[60px]">
-              {/* Brand Logo (Responsive scaling) */}
-              <Link href="/" className="flex items-center justify-center shrink-0">
-                <Image
-                  src={logo}
-                  alt="Z&S Carpets"
-                  width={187}
-                  height={80}
-                  className="h-[44px] sm:h-[54px] md:h-[64px] lg:h-[72px] 2xl:h-[80px] w-auto object-contain"
-                  priority
-                />
-              </Link>
+          {/* Centered Brand Logo */}
+          <Link href="/" className="flex items-center justify-center shrink-0">
+            <Image
+              src={logo}
+              alt="Z&S Carpets"
+              width={227}
+              height={96}
+              className="h-[50px] sm:h-[62px] md:h-[74px] lg:h-[84px] 2xl:h-[96.22px] w-auto 2xl:w-[227px] object-contain"
+              priority
+            />
+          </Link>
 
-              {/* Right Nav Links (Visible on lg, xl, and 2xl screens) */}
-              <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-[48px]">
-                <NavLink href="/expert-insights">Expert Insights</NavLink>
-                <NavLink href="/contact-us">Contact us</NavLink>
-                <NavLink href="/get-a-sample">Get a sample</NavLink>
-              </div>
+          {/* Right Group: Right Nav Links, Action Button, and Menu */}
+          <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 2xl:gap-[50px]">
+            {/* Right Nav Links (Visible on lg, xl, and 2xl screens) */}
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-[50px]">
+              <NavLink href="/expert-insights">Expert Insights</NavLink>
+              <NavLink href="/contact-us">Contact us</NavLink>
+              <NavLink href="/get-a-sample">Get a sample</NavLink>
             </div>
 
             {/* Action Buttons (SVG Action Button + Menu) */}
-            <div className="flex items-center gap-2 sm:gap-3 2xl:gap-[12px] shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 2xl:gap-[16px] shrink-0">
               <button
                 type="button"
-                className="flex h-[32px] w-[32px] sm:h-[36px] sm:w-[36px] items-center justify-center cursor-pointer transition-opacity hover:opacity-90 shrink-0"
+                className="flex h-[36px] w-[36px] sm:h-[40px] sm:w-[40px] 2xl:h-[46px] 2xl:w-[46px] items-center justify-center cursor-pointer transition-opacity hover:opacity-90 shrink-0"
                 aria-label="Request Quote"
               >
                 <svg
-                  width="36"
-                  height="36"
+                  width="46"
+                  height="46"
                   viewBox="0 0 46 46"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-[32px] w-[32px] sm:h-[36px] sm:w-[36px]"
+                  className="h-[36px] w-[36px] sm:h-[40px] sm:w-[40px] 2xl:h-[46px] 2xl:w-[46px]"
                 >
                   <rect
                     x="0.5"
@@ -108,7 +106,7 @@ export default function Header() {
 
       {/* Lower Header */}
       <div className="w-full bg-[#0066B3]">
-        <div className="mx-auto flex h-[36px] sm:h-[40px] max-w-[1920px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-[80px]">
+        <div className="mx-auto flex h-[38px] sm:h-[42px] 2xl:h-[48px] max-w-[1920px] items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-[102px]">
           <nav className="flex items-center gap-5 sm:gap-7 lg:gap-9 2xl:gap-0 2xl:justify-between 2xl:w-full overflow-x-auto no-scrollbar py-1">
             <DropdownMenu label="Artificial Grass" />
             <DropdownMenu label="Vinyl Flooring" />
@@ -118,6 +116,7 @@ export default function Header() {
             <DropdownMenu label="Carpet Flooring" />
             <DropdownMenu label="Lvt Flooring" />
             <DropdownMenu label="More" />
+            <DropdownMenu label="En" />
 
             {/* On 2xl screen, search button sits cleanly at the end of the justify-between nav */}
             <button
@@ -127,10 +126,11 @@ export default function Header() {
             >
               <svg
                 width="21"
-                height="21"
+                height="20.83"
                 viewBox="0 0 21 21"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-[21px] h-[20.83px]"
               >
                 <path
                   d="M20.8012 19.6974L15.3792 14.4052C16.799 12.875 17.6714 10.8514 17.6714 8.6246C17.6707 3.86106 13.7152 0 8.83537 0C3.95557 0 0 3.86106 0 8.6246C0 13.3881 3.95557 17.2492 8.83537 17.2492C10.9438 17.2492 12.8776 16.5258 14.3966 15.3232L19.8396 20.6363C20.1048 20.8954 20.5353 20.8954 20.8006 20.6363C21.0664 20.3772 21.0664 19.9565 20.8012 19.6974ZM8.83537 15.9223C4.70652 15.9223 1.35945 12.655 1.35945 8.6246C1.35945 4.59421 4.70652 1.32695 8.83537 1.32695C12.9643 1.32695 16.3113 4.59421 16.3113 8.6246C16.3113 12.655 12.9643 15.9223 8.83537 15.9223Z"
@@ -147,11 +147,12 @@ export default function Header() {
             aria-label="Search"
           >
             <svg
-              width="20"
-              height="20"
+              width="21"
+              height="20.83"
               viewBox="0 0 21 21"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="w-[20px] h-[19.8px]"
             >
               <path
                 d="M20.8012 19.6974L15.3792 14.4052C16.799 12.875 17.6714 10.8514 17.6714 8.6246C17.6707 3.86106 13.7152 0 8.83537 0C3.95557 0 0 3.86106 0 8.6246C0 13.3881 3.95557 17.2492 8.83537 17.2492C10.9438 17.2492 12.8776 16.5258 14.3966 15.3232L19.8396 20.6363C20.1048 20.8954 20.5353 20.8954 20.8006 20.6363C21.0664 20.3772 21.0664 19.9565 20.8012 19.6974ZM8.83537 15.9223C4.70652 15.9223 1.35945 12.655 1.35945 8.6246C1.35945 4.59421 4.70652 1.32695 8.83537 1.32695C12.9643 1.32695 16.3113 4.59421 16.3113 8.6246C16.3113 12.655 12.9643 15.9223 8.83537 15.9223Z"

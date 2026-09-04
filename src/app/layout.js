@@ -1,6 +1,5 @@
 import { Inter, Manrope, Nobile } from "next/font/google";
 import "./globals.css";
-import FloatingActions from "@/components/FloatingActions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,10 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.className} ${manrope.variable} ${nobile.variable}`}>
-      <body>
-        {children}
-        <FloatingActions />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

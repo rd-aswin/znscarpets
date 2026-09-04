@@ -2,16 +2,16 @@ export default function DropdownMenu({ label = "Dropdown", children }) {
   return (
     <button
       type="button"
-      className="flex items-center gap-[6px] text-[13px] sm:text-[14px] font-medium text-white cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
+      className="flex items-center gap-[6px] 2xl:gap-[8px] text-[14px] sm:text-[16px] 2xl:text-[18px] font-medium text-white cursor-pointer transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
     >
       <span>{children || label}</span>
       <svg
-        width="12"
-        height="7"
+        width="15"
+        height="9"
         viewBox="0 0 12 7"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0"
+        className="w-[12px] h-[7px] 2xl:w-[15px] 2xl:h-[9px] shrink-0"
       >
         <path
           d="M5.54994 6.16658C5.42091 6.16658 5.29175 6.11635 5.19324 6.01601L0.147861 0.877223C-0.049287 0.676425 -0.049287 0.351268 0.147861 0.150599C0.345009 -0.0500711 0.664255 -0.0501996 0.861277 0.150599L5.54994 4.92608L10.2386 0.150599C10.4358 -0.0501996 10.755 -0.0501996 10.952 0.150599C11.1491 0.351397 11.1492 0.676554 10.952 0.877223L5.90665 6.01601C5.80814 6.11635 5.67898 6.16658 5.54994 6.16658Z"
