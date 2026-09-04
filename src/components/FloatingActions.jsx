@@ -2,7 +2,7 @@ export default function FloatingActions() {
   return (
     <aside
       aria-label="Contact quick actions"
-      className="flex flex-col items-center gap-2 sm:gap-2.5 select-none"
+      className="flex flex-col items-center gap-1.5 sm:gap-2 2xl:gap-2.5 select-none"
     >
       {/* 1. Phone Call Action */}
       <a
@@ -16,7 +16,7 @@ export default function FloatingActions() {
           viewBox="0 0 48 46"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] 2xl:w-[48px] 2xl:h-[46px] block"
+          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] md:w-[42px] md:h-[40px] 2xl:w-[48px] 2xl:h-[46px] block"
         >
           <rect x="0.5" y="0.5" width="47" height="45" rx="7.5" fill="#0066B3" stroke="#0066B3" />
           <path
@@ -40,7 +40,7 @@ export default function FloatingActions() {
           viewBox="0 0 48 46"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] 2xl:w-[48px] 2xl:h-[46px] block"
+          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] md:w-[42px] md:h-[40px] 2xl:w-[48px] 2xl:h-[46px] block"
         >
           <rect width="48" height="46" rx="8" fill="#72BF44" />
           <path
@@ -64,7 +64,7 @@ export default function FloatingActions() {
           viewBox="0 0 48 46"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] 2xl:w-[48px] 2xl:h-[46px] block"
+          className="w-[34px] h-[33px] sm:w-[38px] sm:h-[36px] md:w-[42px] md:h-[40px] 2xl:w-[48px] 2xl:h-[46px] block"
         >
           <rect x="0.5" y="0.5" width="47" height="45" rx="7.5" fill="#812990" stroke="#812990" />
           <path
@@ -73,6 +73,7 @@ export default function FloatingActions() {
           />
         </svg>
       </a>
+
     </aside>
   );
 }
